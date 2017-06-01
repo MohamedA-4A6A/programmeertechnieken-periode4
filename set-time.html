@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="aftellen"></div>
+<script>
+function showOnce() {
+    document.getElementById("aftellen").innerHTML += ("show once");
+}
+setTimeout(showOnce, 3000);
+
+function showMore() {
+      document.getElementById("aftellen").innerHTML += ("show more");
+}
+    setInterval(showMore, 1000);
+    
+var teller = 0;
+    
+function addUp() {
+    teller = teller + 1;
+    document.getElementById("aftellen").innerHTML += (teller);
+}
+addUp(); //console: 1
+addUp(); //console: 2
+addUp(); //console: 3
+addUp(); //console: 4
+addUp(); //console: 5
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<style>
+			#rondje {
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				font-size: 80px;
+                background: green;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -50px;
+				margin-left: -50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="rondje">0</div>
+		<script>
+			var count = 0;
+			
+			function incrementAndDisplay() {
+				if(counter()) {
+					return;
+				}
+                count++;
+				document.getElementById('rondje').innerHTML = count;
+            }
+			
+			function counter() {
+				if(count != 100) {
+					return false;
+				}
+				
+				clearInterval(incrementAndDisplay);
+				changeScreen();
+				return true;
+			}
+			
+			function changeScreen() {
+				document.body.style.background = 'white';	
+			}
+			
+            setInterval(incrementAndDisplay, 1000);
+		</script>
+	</body>
+</html>

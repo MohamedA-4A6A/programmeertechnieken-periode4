@@ -1,0 +1,35 @@
+opdracht 1 ----
+
+SELECT (normale_werkuren + extra_werkuren)FROM gewerkte_uren;
+
+Opdracht 2 ----
+
+SELECT achternaam, dienstverbanden.soort FROM medewerkers, dienstverbanden
+WHERE dienstverband_id = dienstverbanden.id;
+
+Opdracht 3 ----
+
+SELECT gewerkte_uren.*, medewerkers.achternaam FROM gewerkte_uren, medewerkers WHERE medewerker_id = medewerkers.id;
+
+Opdracht 4 ----
+
+SELECT achternaam
+FROM medewerkers
+WHERE dienstverband_id IN (
+    
+    SELECT id
+    FROM dienstverbanden
+    WHERE soort="tijdelijk"
+    
+);
+
+SELECT achternaam FROM medewerkers,
+dienstverbanden WHERE dienstverband_id = 
+dienstverbanden.id AND dienstverbanden.soort= "Tijdelijk";
+
+Opdracht 5 ----
+
+SELECT achternaam, gewerkte_uren.normale_werkuren FROM dienstverbanden, gewerkte_uren, medewerkers WHERE gewerkte_uren.medewerker_id = medewerkers.id AND dienstverbanden.id = medewerkers.dienstverband_id AND dienstverbanden.soort = "Vast"
+
+
+
