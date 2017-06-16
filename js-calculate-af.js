@@ -15,7 +15,7 @@ function calculate() {
         
     
     
-	document.getElementById("result").innerHTML = resultaat;
+	   document.getElementById("result").innerHTML = resultaat;
     }
     else if(document.getElementById("operation").value == "substract"){
     resultaat = parseFloat(numbersArray[0]);
@@ -47,4 +47,3 @@ function calculate() {
 }
 
 
-console.log("1");
