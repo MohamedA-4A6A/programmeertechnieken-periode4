@@ -1,0 +1,15 @@
+1A:
+ select productcode, bestelling.nummer FROM product, bestelling WHERE productcode = 'NB221' OR productcode = 'NA256' AND voorraad>12 
+
+B:
+SELECT * FROM `bestelling` WHERE besteldatum >2007-04-31 
+
+C:
+
+SELECT AVG(voorraad) FROM product
+
+D:
+
+SELECT DISTINCT bestelnummer, besteld_aantal FROM leverancier_has_product, bestelregel, leverancier WHERE leverancier.leverancierscode = leverancier_has_product.leverancierscode AND leverancier_has_product.productcode = bestelregel.productcode
+
+E:

@@ -1,0 +1,6 @@
+1. git clone (link van repository)
+2. cd (adres kopiëren van locatie git repository op laptop)
+3. git add *
+4. git commit bij elke wijziging
+5. git pull (meer belangrijk in bedrijven)
+6. git push
