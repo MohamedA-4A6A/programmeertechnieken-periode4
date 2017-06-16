@@ -26,6 +26,24 @@ function calculate() {
 	}
    document.getElementById("result").innerHTML = resultaat;
 }
+   else if(document.getElementById("operation").value == "multiply"){
+    resultaat = parseFloat(numbersArray[0]);
+    
+        for(var index = 1; index < numbersArray.length; index++) {
+		resultaat = resultaat * parseInt(numbersArray[index]);
+    
+	}
+   document.getElementById("result").innerHTML = resultaat;
+}
+    else {
+    resultaat = parseFloat(numbersArray[0]);
+    
+        for(var index = 1; index < numbersArray.length; index++) {
+		resultaat = resultaat / parseInt(numbersArray[index]);
+    
+	}
+   document.getElementById("result").innerHTML = resultaat;
+}
 }
 
 
